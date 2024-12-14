@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40; /* Dark gray for headings */
+}
+
+.btn-primary {
+    background-color: #dc3545; /* Chili red */
+    border-color: #dc3545;
+}
+
+.btn-primary:hover {
+    background-color: #c82333; /* Darker red */
+    border-color: #bd2130;
+}
+
+.navbar {
+    background-color: #28a745; /* Green for navigation bar */
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.alert-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #ffffff;
+}
+
+.list-group-item-action:hover {
+    background-color: #dc3545; /* Chili red on hover */
+    color: #ffffff;
+}

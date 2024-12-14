@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-dismissible">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <h1>Welcome to the Dashboard</h1>
+    <p>Your secure area to access data.</p>
+    <a href="{{ url_for('add_farmer') }}" class="btn btn-primary">Add Farmer</a>
+    <br>
+    <a href="{{ url_for('upload_file') }}" class="btn btn-secondary mt-2">Upload File</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-dismissible">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <h1>Welcome to the Dashboard</h1>
+    <p>Your secure area to access data.</p>
+
+    <div class="list-group">
+        <a href="{{ url_for('upload_file', main_folder='employees', subfolder='contracts') }}" class="list-group-item list-group-item-action">Upload Employee Contracts</a>
+        <a href="{{ url_for('upload_file', main_folder='employees', subfolder='personal_info') }}" class="list-group-item list-group-item-action">Upload Employee Personal Info</a>
+        <a href="{{ url_for('upload_file', main_folder='farmers', subfolder='contracts') }}" class="list-group-item list-group-item-action">Upload Farmer Contracts</a>
+        <a href="{{ url_for('upload_file', main_folder='farmers', subfolder='personal_info') }}" class="list-group-item list-group-item-action">Upload Farmer Personal Info</a>
+        <a href="{{ url_for('upload_file', main_folder='procurements', subfolder='invoices') }}" class="list-group-item list-group-item-action">Upload Procurement Invoices</a>
+        <a href="{{ url_for('upload_file', main_folder='procurements', subfolder='purchase_orders') }}" class="list-group-item list-group-item-action">Upload Procurement Purchase Orders</a>
+        <a href="{{ url_for('upload_file', main_folder='pictures', subfolder='events') }}" class="list-group-item list-group-item-action">Upload Event Pictures</a>
+        <a href="{{ url_for('upload_file', main_folder='pictures', subfolder='meetings') }}" class="list-group-item list-group-item-action">Upload Meeting Pictures</a>
+        <a href="{{ url_for('upload_file', main_folder='reports', subfolder='financial') }}" class="list-group-item list-group-item-action">Upload Financial Reports</a>
+        <a href="{{ url_for('upload_file', main_folder='reports', subfolder='activity') }}" class="list-group-item list-group-item-action">Upload Activity Reports</a>
+        <a href="{{ url_for('upload_file', main_folder='administration', subfolder='policies') }}" class="list-group-item list-group-item-action">Upload Administration Policies</a>
+        <a href="{{ url_for('upload_file', main_folder='administration', subfolder='guidelines') }}" class="list-group-item list-group-item-action">Upload Administration Guidelines</a>
+        <a href="{{ url_for('upload_file', main_folder='performance_monitors', subfolder='individual') }}" class="list-group-item list-group-item-action">Upload Individual Performance Monitors</a>
+        <a href="{{ url_for('upload_file', main_folder='performance_monitors', subfolder='team') }}" class="list-group-item list-group-item-action">Upload Team Performance Monitors</a>
+        <a href="{{ url_for('upload_file', main_folder='evaluation', subfolder='reviews') }}" class="list-group-item list-group-item-action">Upload Evaluation Reviews</a>
+        <a href="{{ url_for('upload_file', main_folder='evaluation', subfolder='assessments') }}" class="list-group-item list-group-item-action">Upload Evaluation Assessments</a>
+    </div>
+</body>
+</html>
